@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <getopt.h>
-
+//by Nancy Borwey 2/6/2024
 int main(int argc, char *argv[]) {
     int proc = 0, simul = 0, iter = 0;
     int option;
@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     while((option = getopt(argc, argv, "hn:s:t:")) != -1) {
         switch (option) {
             case 'h':
-                printf("oss [-h] [-n proc] [-s simul] [-t iter]\n");
+                printf("-n [Number of total children to launch]\n-s [number of children allowed to run simultaneously]\n-t [number to pass to the user process]");
                 return 0;
             case 'n':
                 proc = atoi(optarg);
